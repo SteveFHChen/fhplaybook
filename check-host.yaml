@@ -1,4 +1,4 @@
-- hosts: inventory1-stevechen
+- hosts: inventory2
   remote_user: root
   tasks: 
   - name: "echo hostname"
