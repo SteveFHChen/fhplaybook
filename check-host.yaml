@@ -2,4 +2,4 @@
   remote_user: root
   tasks: 
   - name: "echo hostname"
-    shell: "hostname"
+    shell: hostname
