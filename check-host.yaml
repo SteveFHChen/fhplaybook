@@ -7,3 +7,11 @@
     shell: echo `hostname`
   - name: "write file 1"
     shell: date >> /root/test1.txt
+  - name: "Output file 1"
+    shell: cat /root/test1.txt
+  - name: "List file 1"
+    shell: ls -lt /root
+  - name: "Output file 2"
+    shell: 
+      chdir: /root
+      cmd: ls -lt
