@@ -9,9 +9,15 @@
     shell: date >> /root/test1.txt
   - name: "Output file 1"
     shell: cat /root/test1.txt
+  - name: Steve create soft link 1
+    file: 
+      src: /root/test1.txt 
+      dest: /root/test1.ln
+      state: link
   - name: "List file 1"
     shell: ls -lt /root
   - name: "Output file 2"
     shell: 
       chdir: /root
       cmd: ls -lt
+      
