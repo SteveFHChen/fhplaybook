@@ -9,6 +9,9 @@
     shell: date >> /root/test1.txt
   - name: "Output file 1"
     shell: cat /root/test1.txt
+    register: shell_result
+  - debug:
+      var: shell_result.stdout_lines
   - name: Steve create soft link 1
     file: 
       src: /root/test1.txt 
@@ -16,8 +19,13 @@
       state: link
   - name: "List file 1"
     shell: ls -lt /root
+    register: shell_result
+  - debug:
+      var: shell_result.stdout_lines
   - name: "Output file 2"
     shell: 
       chdir: /root
       cmd: ls -lt
+  - debug:
+      var: shell_result.stdout_lines
       
