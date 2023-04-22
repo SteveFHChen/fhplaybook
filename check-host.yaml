@@ -1,5 +1,7 @@
 - hosts: group1
   remote_user: root
   tasks: 
+  - name: "echo helloworld"
+    shell: echo helloworld
   - name: "echo hostname"
-    shell: echo helloworld || echo `hostname`
+    shell: echo `hostname`
